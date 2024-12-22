@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: intro
+spec:
+  containers:
+  - name: intro
+    image: mahraurdarshil89/darshil-first-nodejs:latest
+    ports:
+    - containerPort: 8000

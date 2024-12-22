@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: intro-deployment
+  labels:
+    app: intro
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: intro
+  template:
+    metadata:
+      labels:
+        app: intro
+    spec:
+      containers:
+      - name: intro
+        image: mahraurdarshil89/darshil-first-nodejs:latest
+        ports:
+        - containerPort: 8000
