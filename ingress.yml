@@ -4,7 +4,7 @@ metadata:
   name: ingress-for-nginx
 spec:
   rules:
-  - host: foo.bar.com
+  - host: darshil.com
     http:
       paths:
       - path: /testing
