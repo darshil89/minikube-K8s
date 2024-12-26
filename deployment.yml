@@ -20,6 +20,7 @@ spec:
         volumeMounts:
         - name: db-connection
           mountPath: /etc/db-connection
+          readOnly: true
         ports:
         - containerPort: 80
 
