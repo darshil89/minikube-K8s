@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: intro-deployment
+  name: nginx-deployment
   labels:
-    app: intro
+    app: nginx
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: intro
+      app: nginx
   template:
     metadata:
       labels:
-        app: intro
+        app: nginx
     spec:
       containers:
-      - name: intro
-        image: mahraurdarshil89/darshil-first-nodejs:latest
+      - name: nginx-app
+        image: nginx
         ports:
-        - containerPort: 8000
+        - containerPort: 80
